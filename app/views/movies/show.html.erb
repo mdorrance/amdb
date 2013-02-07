@@ -7,7 +7,8 @@
 
 <p>
   <b>Director:</b>
-  <%= @movie.director_id %>
+
+  <%= @directors.name %>
 </p>
 
 <p>
@@ -15,6 +16,15 @@
   <%= @movie.year %>
 </p>
 
+<p>
+  <b>Actors:</b>
+  <%= @movie.roles.actor.name %>
+</p>
+
+<p>
+  <b>Actors:</b>
+  <%= @movie.year %>
+</p>
 
 <%= link_to 'Edit', edit_movie_path(@movie) %> |
 <%= link_to 'Back', movies_path %>

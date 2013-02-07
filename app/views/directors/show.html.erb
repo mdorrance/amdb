@@ -1,4 +1,12 @@
 <p id="notice"><%= notice %></p>
+<h2>Movies directed by <%= @director.name %></h2>
+<ul>
+  <% @movies.each do |title| %>
+  <%= title.title %> :
+  <%= title.year %>
+ </ul>
+ <% end %>
+
 
 <p>
   <b>Name:</b>
@@ -8,6 +16,11 @@
 <p>
   <b>Dob:</b>
   <%= @director.dob %>
+</p>
+
+<p>
+  <b>Photo:</b>
+  <%= image_tag @director.dirphoto %>
 </p>
 
 

@@ -14,6 +14,7 @@ class MoviesController < ApplicationController
   # GET /movies/1.json
   def show
     @movie = Movie.find(params[:id])
+    @directors = Director.find_by_id(@movie.director_id)
 
     respond_to do |format|
       format.html # show.html.erb
